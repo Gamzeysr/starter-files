@@ -9,7 +9,7 @@ export default function Search() {
 
 
     const [term, setTerm] = useState("");
-    const [options, setOptions] = useState([])
+    const [options, setOptions] = useState < [] > ([])
 
 
     const getSearch = (value: string) => {
