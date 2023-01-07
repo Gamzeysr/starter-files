@@ -16,7 +16,13 @@ export default function Search() {
         fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${value}&limit=5&appid=${API_KEY}`)
             .then((res) => res.json())
             // .then((data) => console.log(data));
-            .then((data) => setOptions(data));
+            // .then((data) => setOptions(data));
+            .then((data) => {
+                const forecastData = {
+                    ...data.city,
+                    list: data.list,
+                };
+            });
     };
 
 
